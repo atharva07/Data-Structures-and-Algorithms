@@ -1,13 +1,10 @@
 package DataStructure.LinkedList.LinkedListProblems;
 
-import java.util.Stack;
-
 class Node {
-    
     int data;
     Node next;
 
-    Node(int data, Node next) {
+    Node (int data, Node next) {
         this.data = data;
         this.next = next;
     }
@@ -18,25 +15,18 @@ class Node {
     }
 }
 
-public class ReverseLinkedList {
-    public static Node reverseLinkedlist(Node head) {
-
-        // this problem is solved using Stack data structure
+public class ReverseLinkedListOptimized1 {
+    
+    public static Node reverseLinkedlistOptimized(Node head) {
         Node temp = head;
-        Stack<Integer> stack = new Stack<>();
+        Node prev = null;
 
         while (temp != null) {
-            stack.push(temp.data);
-            temp = temp.next;
+            Node front = temp.next;
+            prev = temp;
+            temp = front;
         }
-        temp = head;
-
-        while (temp != null) {
-            temp.data = stack.pop();
-            temp = temp.next;
-        }
-
-        return head;
+        return prev;
     }
 
     public static void printLinkedList(Node head) {
@@ -61,7 +51,7 @@ public class ReverseLinkedList {
         printLinkedList(head);
 
         // reverse the linked List
-        head = reverseLinkedlist(head);
+        head = reverseLinkedlistOptimized(head);
 
         // Display the value of the middle node
         System.out.println("Reversed Linked List");
