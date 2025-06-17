@@ -16,7 +16,7 @@ class Node {
 }
 
 public class ReverseLinkedListOptimized1 {
-    
+
     public static Node reverseLinkedlistOptimized(Node head) {
         Node temp = head;
         Node prev = null;
