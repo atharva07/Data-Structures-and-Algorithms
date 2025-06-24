@@ -15,7 +15,7 @@ public class CountSubArraySumEqualsK {
 
             // Add currrent Element to Prefix Sum
             preSum += arr[i];
-
+            
             // Calculate x-k
             int remove = preSum - k;
 
@@ -28,6 +28,7 @@ public class CountSubArraySumEqualsK {
         return cnt;
     }
 
+    // Main function
     public static void main(String[] args) {
         int[] arr = {3,1,2,4};
         int k = 6;
