@@ -1,7 +1,6 @@
 package Algorithms.Searching.BinarySearch;
 
 public class BinarySearchIterative {
-    
     static int binarySearch(int[] arr, int x) {
         int l = 0;
         int r = arr.length - 1;
