@@ -10,6 +10,7 @@ public class ThreeSumToEqualZero {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
 
+        // In this two pointer approach is used
         int n = nums.length;
 
         for (int i = 0; i < n-2; i++) {
@@ -24,6 +25,7 @@ public class ThreeSumToEqualZero {
             while (left < right) {
                 int currentSum = nums[left] + nums[right];
                 if (currentSum == target) {
+                    // if the currentSum == target i.e. b + c = -a, then we will store the triplet
                     result.add(Arrays.asList(nums[i], nums[left], nums[right]));
 
                     // skip duplicates for left and right
@@ -36,8 +38,10 @@ public class ThreeSumToEqualZero {
                     left++;
                     right--;
                 } else if (currentSum < target) {
+                    // If the sum is too small, move left pointer towards right by 1
                     left++;
                 } else {
+                    // If the sum is too large, move right pointer towards left by 1
                     right--;
                 }
             }
