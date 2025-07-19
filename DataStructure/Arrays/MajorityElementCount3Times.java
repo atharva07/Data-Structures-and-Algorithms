@@ -15,7 +15,7 @@ public class MajorityElementCount3Times {
         int count1 = 0, count2 = 0;
 
         // First pass to find potential candidates
-        for (int num : nums) {
+        for (int num : nums) {  
             if (num == candidate1) {
                 count1++;
             } else if (num == candidate2) {

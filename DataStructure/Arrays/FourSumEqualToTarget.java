@@ -56,4 +56,4 @@ public class FourSumEqualToTarget {
         res = fourSum(arr, target);
         System.out.println(res);
     }
-} 
+}
