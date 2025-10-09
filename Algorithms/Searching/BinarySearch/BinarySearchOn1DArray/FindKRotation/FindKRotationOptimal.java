@@ -1,4 +1,4 @@
-package Algorithms.Searching.BinarySearch.FindKRotation;
+package Algorithms.Searching.BinarySearch.BinarySearchOn1DArray.FindKRotation;
 
 public class FindKRotationOptimal {
     
@@ -16,7 +16,7 @@ public class FindKRotationOptimal {
                     index = low;
                     ans = arr[low];
                 }
-                break;
+                break;  // this will throw us out of while loop
             }
 
             if (arr[low] <= arr[mid]) {
@@ -30,7 +30,6 @@ public class FindKRotationOptimal {
                     index = mid;
                     ans = arr[mid];
                 }
-
                 high = mid - 1;
             }
         }

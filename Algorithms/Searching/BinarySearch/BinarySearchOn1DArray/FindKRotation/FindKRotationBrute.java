@@ -1,4 +1,4 @@
-package Algorithms.Searching.BinarySearch.FindKRotation;
+package Algorithms.Searching.BinarySearch.BinarySearchOn1DArray.FindKRotation;
 
 public class FindKRotationBrute {
     
