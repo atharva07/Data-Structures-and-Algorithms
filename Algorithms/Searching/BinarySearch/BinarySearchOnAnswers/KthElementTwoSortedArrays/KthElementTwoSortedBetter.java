@@ -1,9 +1,9 @@
-package Algorithms.Searching.BinarySearch.BinarySearchOnAnswers.KthElementTwoSortedArrays;
+
 
 import java.util.ArrayList;
 
 public class KthElementTwoSortedBetter {
-    
+
     public static int kthElement(ArrayList<Integer> a, ArrayList<Integer> b, int m, int n, int k) {
 
         int ele = -1;
