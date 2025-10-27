@@ -30,7 +30,6 @@ public class KthElementTwoSortedOptimal {
 
             else if (l1 > l2) high = mid1 - 1;
             else low = mid1 + 1;
-            
         }
         return 0;
     }
