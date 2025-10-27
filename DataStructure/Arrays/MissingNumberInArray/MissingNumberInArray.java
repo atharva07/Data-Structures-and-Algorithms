@@ -19,6 +19,7 @@ public class MissingNumberInArray {
 
     public static void main(String[] args) {
         int arr[] = {1,2,4,5};
+        //int arr[] = {8, 2, 4, 5, 3, 7, 1};
         MissingNumberInArray obj = new MissingNumberInArray();
         int result = obj.missingNumber(arr);
         System.out.println("The missing number is " + result);
