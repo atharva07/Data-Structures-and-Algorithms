@@ -15,6 +15,8 @@ public class BestTimeStockBuyAndSell {
         return maxPro;
     }
 
+    // Time complexity - O(N^2)
+    
     public static void main(String[] args) {
         int arr[] = {7,1,5,3,6,4};
         int maxPr = maxProfit(arr);
