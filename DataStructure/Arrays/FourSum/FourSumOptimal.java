@@ -1,9 +1,10 @@
-package DataStructure.Arrays;
+package DataStructure.Arrays.FourSum;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FourSumEqualToTarget {
+public class FourSumOptimal {
     
     public static List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
@@ -11,12 +12,12 @@ public class FourSumEqualToTarget {
 
         int n = nums.length;
 
-        for (int i = 0; i < n - 3; i++) {
+        for (int i = 0; i < n; i++) {
             if (i > 0 && nums[i] == nums[i-1]) {
                 continue;
             }
 
-            for (int j = i + 1; j < n -2; j++) {
+            for (int j = i + 1; j < n; j++) {
                 if (j > i && nums[j] == nums[j - 1]) {
                     continue;
                 }
@@ -33,9 +34,11 @@ public class FourSumEqualToTarget {
                         while (left < right && nums[left] == nums[left + 1]) {
                             left++;
                         }
+
                         while (left < right && nums[right] == nums[right - 1]) {
                             right--;
                         }
+                        
                         left++;
                         right--;
                     } else if (currentSum < remainingTaget) {
