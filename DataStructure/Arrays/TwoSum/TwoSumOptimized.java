@@ -17,6 +17,8 @@ public class TwoSumOptimized {
         return "NO";
     }
 
+    // this is two pointer method
+
     public static void main(String[] args) {
         int n = 5;
         int[] arr = {2, 6, 5, 8, 11};
