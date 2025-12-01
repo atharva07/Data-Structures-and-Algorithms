@@ -13,7 +13,6 @@ public class LongestNiceSubString {
             Set<Character> upperSet = new HashSet<>();
             Set<Character> lowerSet = new HashSet<>();
 
-
             for (int end = start; end < n; end++) {
                 char c = s.charAt(end);
 
