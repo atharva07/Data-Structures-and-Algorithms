@@ -1,6 +1,6 @@
 from typing import List
 
-class CountSubarrayWithSumK:
+class SubarrayWithSumK:
     def longestSubArrayWithSumK(self, nums: List[int], k: int) -> int:
         # Dictionary to store the prefix sum and their frequencies
         prefix_count = {}
@@ -24,7 +24,7 @@ class CountSubarrayWithSumK:
         return count
     
 def main():
-    sol = CountSubarrayWithSumK()
+    sol = SubarrayWithSumK()
     nums = [1,1,1]
     k = 2
     res = sol.longestSubArrayWithSumK(nums, k)
