@@ -6,19 +6,22 @@ import java.util.Map;
 public class LongestSubarrayWithSumK {
     
     public static int longestSubarraySumK(int[] arr, int k) {
-        Map<Integer, Integer> sumIndexMap = new HashMap<>();
-        sumIndexMap.put(0, -1);
-        int prefixSum = 0, maxLen = 0;
+        Map<Integer, Integer> prefixSumCount = new HashMap<>();
+        prefixSumCount.put(0, 1);
+        int count = 0;
+        int prefixSum = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            prefixSum += arr[i];
-            if (sumIndexMap.containsKey(prefixSum - k)) {
-                int currentLen = i - sumIndexMap.get(prefixSum - k);
-                maxLen = Math.max(maxLen, currentLen);
+        for (int num : arr) {
+            prefixSum += num;
+
+            if (prefixSumCount.containsKey(prefixSum - k)) {
+                count += prefixSumCount.get(prefixSum - k);
             }
-            sumIndexMap.putIfAbsent(prefixSum, i);
+
+            prefixSumCount.put(prefixSum, prefixSumCount.getOrDefault(prefixSum, 0) + 1);
         }
-        return maxLen;
+
+        return count;
     }
 
     public static void main(String[] args) {
