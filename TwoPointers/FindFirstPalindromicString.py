@@ -21,12 +21,11 @@ class FindFirstPalindromicString:
                 return word
             
         return ""
-
             
 def main():
     sol = FindFirstPalindromicString()
-    words = ["def","ghi"]
-    res = sol.firstPalindromicString(words
+    words = ["def","ghi","aba"]
+    res = sol.firstPalindromicString(words)
     print(res)
 
 if __name__ == "__main__":
