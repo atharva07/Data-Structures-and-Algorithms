@@ -1,5 +1,4 @@
 from typing import List
-
 class FindDuplicateNumber:
     def findDuplicate(self, nums: List[int]) -> int:
         left = 1
