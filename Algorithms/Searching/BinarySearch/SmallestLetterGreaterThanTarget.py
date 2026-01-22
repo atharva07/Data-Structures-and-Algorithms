@@ -15,6 +15,7 @@ class SmallestLetterGreaterThanTarget:
                 right = mid - 1
                 result = letters[mid]
 
+        # Here we handled edge case with letters[0]
         return result if result is not None else letters[0]
     
 def main():
