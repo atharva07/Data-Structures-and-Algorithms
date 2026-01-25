@@ -4,9 +4,15 @@ class NumberOfArithmaticTriplet:
         n = len(nums)
         count = 0
 
+        # High level approach
+        # Fix the middle pointer j
+        # look to left to find i such that nums[j] - nums[i] == diff
+        # look to right to find k such that nums[k] - nums[j] == diff
+        # If both found increment count, this will be one triplet
+
         for j in range(1, n-1):
-            i = j - 1
-            k = j + 1
+            i = j - 1 # left pointer in triplet
+            k = j + 1 # right pointer in triplet
 
             found_i = False
             while i >= 0:
@@ -18,9 +24,9 @@ class NumberOfArithmaticTriplet:
                 i -= 1
 
             if not found_i:
-                continue
+                continue # No point in checking right side if the left side failed
 
-            while k < n:
+            while k < n: 
                 if nums[k] - nums[j] == diff:
                     count += 1
                     break
