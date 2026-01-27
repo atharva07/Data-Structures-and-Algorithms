@@ -3,6 +3,8 @@ from typing import List
 class LongestIncreasingSubsequence:
     def lengthOfLIS(self, nums: List[int]) -> int:
         tails = []
+        # The tail array doesn't necessarily store an actual subsequence, but it maintains the minimum possible tail values for increasing 
+        # subsequence of different lengths
 
         for x in nums:
             left = 0
