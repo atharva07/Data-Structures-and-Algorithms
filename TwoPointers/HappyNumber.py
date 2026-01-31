@@ -27,7 +27,6 @@ class HappyNumber:
 def main():
     sol = HappyNumber()
     nums = 2
-
     result = sol.findHappyNumber(nums)
     print(result)
 
