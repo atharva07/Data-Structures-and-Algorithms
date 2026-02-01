@@ -16,6 +16,22 @@ class ValidAnagramOptimized:
         
         return True
     
+    def isAnagramOptimized(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        
+        char_count1 = {}
+        char_count2 = {}
+
+        for ch1, ch2 in zip(s, t):
+            char_count1[ch1] = char_count1.get(ch1, 0) + 1
+            char_count2[ch2] = char_count2.get(ch2, 0) + 1
+
+        if char_count1 != char_count2:
+            return False
+
+        return True 
+    
 def main():
     s = "anagram"
     t = "nagaram"
