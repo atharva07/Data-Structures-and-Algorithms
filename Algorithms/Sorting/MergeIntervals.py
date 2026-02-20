@@ -41,7 +41,7 @@ class MergeIntervals:
 def main():
     sol = MergeIntervals()
     intervals = [[1,3],[2,6],[8,10],[15,18]]
-        result = sol.merge(intervals)
+    result = sol.merge(intervals)
     print(result)
 
 if __name__ == "__main__":
