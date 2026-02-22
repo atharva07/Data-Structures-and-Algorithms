@@ -5,7 +5,9 @@ class WordPattern:
         if len(pattern) != len(words):
             return False
         
+        # this dict ensures one char maps to one word
         char_to_word = {}
+        # this dict ensures one word maps to one char
         word_to_char = {}
 
         for char, word in zip(pattern, words):
