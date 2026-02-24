@@ -1,4 +1,4 @@
-package Algorithms.Searching.BinarySearch;
+package Algorithms.Searching.BinarySearch.JavaCode;
 
 public class BinarySearchIterative {
     static int binarySearch(int[] arr, int x) {
