@@ -11,6 +11,7 @@ class MinimumDiffHighestLowest:
         min_diff = float('inf')
         n = len(sorted_nums)
 
+        # we are using [i+k-1] to get an acess to particular kth element
         for i in range(n-k+1):
             diff = sorted_nums[i+k-1] - sorted_nums[i]
             min_diff = min(min_diff, diff)
