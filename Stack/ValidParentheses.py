@@ -18,4 +18,14 @@ class ValidParentheses:
                 else:
                     return False
         return len(stack) == 0
-            
+    
+def main():
+    obj = ValidParentheses()
+    print(obj.isValid("()"))
+    print(obj.isValid("()[]{}"))
+    print(obj.isValid("(]"))
+    print(obj.isValid("([)]"))
+    print(obj.isValid("{[]}"))
+
+if __name__ == "__main__":
+    main()
