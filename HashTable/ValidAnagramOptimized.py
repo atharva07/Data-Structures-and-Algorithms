@@ -27,6 +27,7 @@ class ValidAnagramOptimized:
             char_count1[ch1] = char_count1.get(ch1, 0) + 1
             char_count2[ch2] = char_count2.get(ch2, 0) + 1
 
+        # If both dict are not exactly the same, then we will return False
         if char_count1 != char_count2:
             return False
 
