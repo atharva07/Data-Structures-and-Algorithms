@@ -27,7 +27,6 @@ class ImplementStackUsingQueue:
         self.q1, self.q2 = self.q2, self.q1
         return "Top element: ", top_element
 
-
     def empty(self) -> bool:
         return len(self.q1) == 0
     
@@ -44,6 +43,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
