@@ -1,5 +1,24 @@
 class LongestSubstringWithoutDuplicate:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    
+    # Complexity - O(n^2)
+    def lengthOfLongestSubstringBrute(self, s: str) -> int:
+        n = len(s)
+        max_len = 0
+
+        for i in range(n):
+            seen = set()
+
+            for j in range(i, n):
+                if s[j] in seen:
+                    break
+                
+                seen.add(s[j])
+                max_len = max(max_len, j - i + 1)
+
+        return max_len
+
+    # Complexity - O(n)
+    def lengthOfLongestSubstringOptimized(self, s: str) -> int:
         char_set = set()
         left = 0
         max_len = 0
