@@ -1,6 +1,7 @@
-from rpds import List
+from typing import List
 
 class TwoSumUsingBinarySearch:
+    # complexity: O(log n)
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         n = len(numbers)
 
