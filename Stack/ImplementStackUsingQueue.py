@@ -5,9 +5,11 @@ class ImplementStackUsingQueue:
         self.q1 = deque()
         self.q2 = deque()
 
+    # Append from the back in deque
     def push(self, x: int) -> None:
         self.q1.append(x)
 
+    # popleft - remove from the front
     def pop(self) -> int:
         while len(self.q1) > 1:
             self.q2.append(self.q1.popleft())
@@ -15,7 +17,7 @@ class ImplementStackUsingQueue:
         popped = self.q1.popleft()
         
         self.q1, self.q2 = self.q2, self.q1
-        return "popped: ", popped
+        return popped
 
     def top(self) -> int:
         while len(self.q1) > 1:
@@ -25,7 +27,7 @@ class ImplementStackUsingQueue:
         self.q2.append(top_element) # We are putting back the top element
 
         self.q1, self.q2 = self.q2, self.q1
-        return "Top element: ", top_element
+        return top_element
 
     def empty(self) -> bool:
         return len(self.q1) == 0
@@ -37,9 +39,12 @@ def main():
     stack.push(3)
     #stack.push(4)
 
-    print(stack.top())
-    print(stack.pop())
-    print(stack.empty())
+    print("top():", stack.top())   # expected 3
+    print("pop():", stack.pop())   # expected 3
+    print("top():", stack.top())   # expected 2
+    print("pop():", stack.pop())   # expected 2
+    print("pop():", stack.pop())   # expected 1
+    print("empty():", stack.empty())
 
 if __name__ == "__main__":
     main()
