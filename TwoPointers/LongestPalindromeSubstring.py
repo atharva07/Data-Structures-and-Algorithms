@@ -1,5 +1,4 @@
 class LongestPalindromeSubstring:
-    
     def longestPalindrome(self, s: str) -> str:
         def expandAroundCenter(left: int, right: int) -> str:
             # Expand as long as characters match within bounds
@@ -16,7 +15,6 @@ class LongestPalindromeSubstring:
         longest = ""
 
         for i in range(len(s)):
-
             # Odd length palindrome -> center at i
             odd_palindrome = expandAroundCenter(i,i)
             # Even length palindrome -> center between i and i+1

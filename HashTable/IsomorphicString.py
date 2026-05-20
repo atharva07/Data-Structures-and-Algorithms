@@ -7,7 +7,6 @@ class IsomorphicString:
         dict2 = dict()
 
         for ch_s, ch_t in zip(s,t):
-
             if ch_s in dict1:
                 if dict1[ch_s] != ch_t:
                     return False
