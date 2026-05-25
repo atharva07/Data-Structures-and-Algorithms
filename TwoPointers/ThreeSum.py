@@ -43,7 +43,8 @@ class ThreeSum:
     
 def main():
     sol = ThreeSum()
-    nums = [-1, 0, 1, 2, -1, -4]
+    #nums = [-1, 0, 1, 2, -1, -4]
+    nums = [-2,0,3,-1,4,0,3,4,1,1,1,-3,-5,4,0]
 
     result = sol.threeSumProblem(nums)
     print(result)
